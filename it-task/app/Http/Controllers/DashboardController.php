@@ -32,6 +32,8 @@ class DashboardController extends Controller
         							   'categories' => $categories, 
         							   'posts' => $posts,
                                        'locale' => $locale )); 
-        							   // 'heading' => $heading )); 
+        							   // 'heading' => $heading ));
+        // // get the translated message and show it
+        // echo trans('language.message'); 
     }
 }

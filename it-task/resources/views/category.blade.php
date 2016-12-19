@@ -6,11 +6,15 @@
 <!-- if posts is found-->
 @if($posts)
     @section('content')
-        <p><a href="/{{$locale}}/dashboard" class="btn btn-info">Back to Dashboard</a></p>
-        <p><a href="/{{$locale}}/dashboard/category/{{$category->id}}/post" class="btn btn-info">Create New Post</a></p>
+        <p>
+            <a href="/{{$locale}}/dashboard" class="btn btn-info">
+                {{ trans('language.Back_to_Dashboard') }}
+            </a>
+        </p>
+        <p><a href="/{{$locale}}/dashboard/category/{{$category->id}}/post" class="btn btn-info">{{ trans('language.Create_New_Post') }}</a></p>
         <!-- if is null posts -->
         @if($posts->isEmpty())
-            <p> No Posts in This Category. </p>
+            <p> {{ trans('language.No_Posts_in_This_Category')}}. </p>
         @else
             @foreach($posts as $key => $post)
                 <div class="panel panel-default">
@@ -21,7 +25,7 @@
                                 <p> 
                                     {{ $post->description }}
                                     <a href="/{{$locale}}/dashboard/category/post/{{ $post->id}}" >
-                                        read more 
+                                        {{ trans('language.read_more') }} 
                                     </a>
                                 </p>
                             </div><!--./col -->

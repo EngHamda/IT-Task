@@ -289,7 +289,7 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
+        {{ trans('language.Page_Header') }}
         <small>@yield('content-header')</small>
       </h1>
       <ol class="breadcrumb">
@@ -303,7 +303,7 @@ desired effect
 
       <!-- Your Page Content Here -->
       @if(!Auth::guest())
-        <div><a href="/logout" class="btn btn-info">Logout</a></div>
+        <div><a href="/logout" class="btn btn-info">{{ trans('language.Logout') }}</a></div>
         <br>
       @endif
       

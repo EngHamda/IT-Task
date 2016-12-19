@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @if($post)
-    @section('title', $post->etitle)
-    @section('content-header',  $post->etitle)
+    @section('title', $post->title)
+    @section('content-header',  $post->title)
     @section('content')
         <div class="panel panel-default">
             <div class="panel-body">
@@ -19,7 +19,8 @@
             </div><!--./panel-body -->
         </div><!--./panel-->
         <a href="/{{$locale}}/dashboard/category/{{ $post->category->id }}" class="btn btn-info">
-            Back to {{ $post->category->slug }} Category
+            {{ trans('language.Back_to_Category') }}
+            <!-- Back to {{--{{ $post->category->slug }}--}} Category -->
         </a>
     @stop
 @endif
