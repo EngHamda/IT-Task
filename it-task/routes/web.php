@@ -33,7 +33,7 @@ return redirect('/login');
 
 Route::resource('user', 'UserController');
 
-
+/*
 //create category
 use App\Category;
 Route::get('{locale}/create', function($locale) {
@@ -51,6 +51,7 @@ Route::get('{locale}/create', function($locale) {
 
     echo 'Created an article with some translations!';
 });
+
 //show category
 Route::get('a/{locale?}', function($locale) {
 	//if local=null;set $local='en'
@@ -61,7 +62,9 @@ Route::get('a/{locale?}', function($locale) {
 
    // return view('article')->with(compact('article'));
 });
-/**
+
+/*************************************************
+
 Route::get('user/{name?}', function ($name = null) {
     return $name;
 });
