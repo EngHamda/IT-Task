@@ -26,8 +26,6 @@ Admin Area which will have
 			v. English Description
 			vi. Arabic Description
 
-
-
 Note that categories and posts modules are translatable 
 Frontend: (There’s no design )
 	1. List of categories
